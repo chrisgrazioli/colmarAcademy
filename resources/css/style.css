@@ -5,15 +5,6 @@ body{
   margin:0 auto;
   padding: 0;
 }
-/*****font-family: 'Open Sans Condensed', sans-serif;
-font-family: 'Open Sans', sans-serif;
-h1 { font-size: 2em; }
-h2 { font-size: 1.5em; }
-h3 { font-size: 1.17em; }
-h4 { font-size: 1.12em; }
-h5 { font-size: .83em; }
-h6 { font-size: .75em; }
-****/
 h1{
   font-family: 'Open Sans', sans-serif;
   font-size:2rem;
@@ -67,10 +58,13 @@ header span.bold{
   display:flex;
   align-items: center;
 }
-nav ul{
+nav.mobile{
+  display: none;
+}
+nav.desktop ul{
   display:flex;
 }
-nav li{
+nav.desktop li{
   padding-left: 16px;
 }
 /***** Jumbotron*****/
@@ -237,4 +231,119 @@ footer{
   height:64px;
   padding: 0 24px;
   border-top: 1px solid gray;
+}
+
+/*****MOBILE LAYOUT*****/
+@media only screen and (max-width : 768px){
+  body{
+    max-width: 100%;
+  }
+  /*****Header/Nav SECTION*****/
+  header span{
+    display: none;
+  }
+  .logo{
+    display: none;
+  }
+  nav.desktop{
+    display:none;
+  }
+  nav.mobile{
+    display:flex;
+    width: 100%;
+  }
+  nav.mobile ul{
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+  }
+  nav.mobile img{
+    height:32px;
+  }
+  /*****Jumbotron SECTION*****/
+  .jumbotron{
+    flex-direction: column;
+  }
+  .jumbotron img{
+    width:100%;
+    padding:32px 24px 32px 24px;
+  }
+  .jumbotron div{
+    width:100%;
+  }
+  /*****EVENTS SECTION*****/
+  .events .left{
+    display:none;
+  }
+  .right{
+    width:100%;
+  }
+  .event{
+    display:flex;
+    flex-direction: column;
+  }
+  .event-left{
+    width: 100%;
+    align-self: center;
+    padding: 16px 16px;
+  }
+  .event-right{
+    width:65%;
+  }
+/*****COURSES SECTION*****/
+  .courses{
+    background-color: white;
+  }
+  .courses h2{
+    margin-top: 32px;
+    text-align: center;
+  }
+  .programs{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    background-color: white;
+    margin:0;
+  }
+  .program{
+    display:flex;
+    background-color: whitesmoke;
+    width: 100%;
+    margin-bottom:.6rem ;
+  }
+  .program h3{
+    padding-left: 1.15rem;
+    margin:0;
+  }
+  .program img,
+  .program h4,
+  .program p{
+      display:none;
+  }
+  /*****THESIS SECTION*****/
+  .thesis-left{
+    max-width:100%;
+    margin-bottom:1.75rem;
+    padding:0;
+  }
+  .thesis-left h2,
+  .thesis-left p{
+    display:none;
+  }
+  .thesis-left video{
+    width:100%;
+  }
+  .thesis-right{
+    display:none;
+  }
+
+  /*****FOOTER SECTION*****/
+  footer span{
+    margin:1.15rem 0;
+  }
+  footer nav{
+    display:none;
+  }
+
+
 }
