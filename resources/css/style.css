@@ -37,22 +37,22 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height:64px;
-  margin:0 24px;
+  height:4.57rem;
+  margin:0 1.7rem;
 }
 header .logo img{
-  height:32px;
+  height:2.3rem;
 }
 header span{
   font-size: 1.75rem;
   color:gray;
-  padding-bottom: 5px;
+  padding-bottom: .35rem;
 }
 header span.bold{
   font-weight: bold;
   font-size: 1.75rem;
   color:black;
-  padding-bottom: 5px;
+  padding-bottom: .35rem;
 }
 .logo{
   display:flex;
@@ -65,7 +65,7 @@ nav.desktop ul{
   display:flex;
 }
 nav.desktop li{
-  padding-left: 16px;
+  padding-left: 1.15rem;
 }
 /***** Jumbotron*****/
 .jumbotron{
@@ -76,7 +76,7 @@ nav.desktop li{
 }
 .jumbotron img{
   width:60%;
-  padding:32px 24px 32px 24px;
+  padding:2.3rem 1.7rem 2.3rem 1.7rem;
 }
 .jumbotron div{
   width:40%;
@@ -102,22 +102,22 @@ nav.desktop li{
   display:flex;
   flex-direction: column;
   width:60%;
-  padding:32px 24px;
+  padding:2.3rem 1.7rem;
   border-right:2px solid whitesmoke;
 }
 .left img{
   max-width:100%
 }
 .left h2{
-  margin-top: 24px;
-  margin-bottom: 24px;
+  margin-top: 1.7rem;
+  margin-bottom: 1.7rem;
 }
 .right{
   display:flex;
   flex-direction: column;
   justify-content:flex-start;
   width:40%;
-  padding-top: 16px;
+  padding-top: 1.15rem;
 }
 .event{
   display:flex;
@@ -125,7 +125,7 @@ nav.desktop li{
 .event-left{
   width: 35%;
   align-self: center;
-  padding: 16px 16px;
+  padding: 1.15rem 1.15rem;
 }
 .event-left img{
   max-width: 100%;
@@ -147,7 +147,7 @@ nav.desktop li{
   background-color: whitesmoke;
 }
 .courses h2{
-  margin-top: 32px;
+  margin-top: 2.3rem;
   text-align: center;
 }
 .programs{
@@ -228,13 +228,19 @@ footer{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height:64px;
-  padding: 0 24px;
+  height:4.57rem;
+  padding: 0 1.7px;
   border-top: 1px solid gray;
+}
+footer nav ul{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width:4rem;
 }
 
 /*****MOBILE LAYOUT*****/
-@media only screen and (max-width : 768px){
+@media only screen and (max-width : 380px){
   body{
     max-width: 100%;
   }
@@ -258,7 +264,7 @@ footer{
     justify-content: space-between;
   }
   nav.mobile img{
-    height:32px;
+    height:2.3rem;
   }
   /*****Jumbotron SECTION*****/
   .jumbotron{
@@ -266,36 +272,56 @@ footer{
   }
   .jumbotron img{
     width:100%;
-    padding:32px 24px 32px 24px;
+    padding: 0;
   }
   .jumbotron div{
     width:100%;
   }
+  .jumbotron h1,
+  .jumbotron p {
+    margin: 2.3rem 0 1.7rem 1.15rem;
+  }
+  .button{
+    margin:2.3rem 1.15rem;
+  }
+
   /*****EVENTS SECTION*****/
   .events .left{
     display:none;
   }
   .right{
     width:100%;
+    border-bottom: 1px solid whitesmoke;
   }
   .event{
     display:flex;
     flex-direction: column;
+    margin-bottom: 4.57rem;
   }
   .event-left{
     width: 100%;
     align-self: center;
-    padding: 16px 16px;
+    padding: 1.15rem 1.15rem;
+    margin: 1.15rem;
   }
   .event-right{
     width:65%;
+  }
+  .event h3,
+  .event p,
+  .event a{
+    margin-left: 1.15rem;
+  }
+  .event.gray{
+    background-color: white;
   }
 /*****COURSES SECTION*****/
   .courses{
     background-color: white;
   }
   .courses h2{
-    margin-top: 32px;
+    margin-top: 2.3rem;
+    margin-bottom: 1.15rem;
     text-align: center;
   }
   .programs{
@@ -303,16 +329,18 @@ footer{
     flex-direction: column;
     width:100%;
     background-color: white;
-    margin:0;
+    padding-bottom: 1.7rem;
+    margin:0 0 1.15rem 0;
+    border-bottom: 1px solid whitesmoke;
   }
   .program{
     display:flex;
     background-color: whitesmoke;
-    width: 100%;
-    margin-bottom:.6rem ;
+    width: 90%;
+    margin:0 1.15rem .57rem 1.15rem;
   }
   .program h3{
-    padding-left: 1.15rem;
+    padding: 1.15rem 0 1.7rem 1.15rem;
     margin:0;
   }
   .program img,
@@ -344,6 +372,7 @@ footer{
   footer nav{
     display:none;
   }
-
-
+  footer{
+    border: 0;
+  }
 }
